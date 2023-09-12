@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Animation,AnimationController} from '@ionic/angular';
 import { OnInit } from '@angular/core';
+import { Camera, CameraResultType } from '@capacitor/camera';
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
@@ -18,5 +19,12 @@ private animacion:Animation = {}as Animation;
       .duration(1500).iterations(Infinity).fromTo('opacity',0,1)
       this.animacion.play();
   }
+  takePicture = async () => {
+    const image = await Camera.getPhoto({
+      quality: 90,
+      allowEditing: true,
+      resultType: CameraResultType.Uri
+    }); 
+  };
 
 }

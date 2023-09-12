@@ -15,7 +15,7 @@
   <div id="container">
     <ion-card class="truco" class="letritasblancas">
     <h1 class="wachiturro">Bienvenido {{data}}</h1>
-    <ion-button class="boton">abrir camara</ion-button>
+    <ion-button (click)="takePicture()" class="boton" shape="round">abrir camara</ion-button>
     <br><br>
     <a href="/acceso" class="letritasblancas">Atras</a>
     <br><br>
