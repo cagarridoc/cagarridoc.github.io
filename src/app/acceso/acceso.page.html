@@ -1,31 +1,31 @@
 <ion-header [translucent]="true">
   <ion-toolbar class="pollo">
-    <ion-title>Login
+    <ion-title class="letritasblancas">Login
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
+<ion-content [fullscreen]="true" >
   <ion-card class="pollo">
   <div class="ion-text-center">
   <h1 class="letritasblancas">Login</h1>
   </div >
-  <ion-card>
+  <ion-card class="choripan">
     <ion-item>
-      <ion-label position="floating" >Usuario</ion-label>
-      <ion-input type="text" [(ngModel)]="user" name="user" placeholder="usuario" ></ion-input>
+      <ion-label position="floating" class="letritasblancas" >Usuario</ion-label>
+      <ion-input type="text" [(ngModel)]="user" name="user"class="letritasblancas" placeholder="usuario" ></ion-input>
     </ion-item>
   </ion-card>
   <ion-card>
     <ion-item>
-      <ion-label position="floating">Password</ion-label>
-      <ion-input type="password" [(ngModel)]="password" name="password" placeholder="contraseña"></ion-input>
+      <ion-label class="letritasblancas" position="floating">Password</ion-label>
+      <ion-input class="letritasblancas" type="password" [(ngModel)]="password" name="password" placeholder="contraseña"></ion-input>
     </ion-item>
   </ion-card>
 
   <div class="ion-text-center">
   <ion-button color="primary" (click)="validarUser()" shape="round">Login</ion-button>
-  <a href="/recordar">recuperar contraseña</a>
+  <a href="/recordar" class="truco">recuperar contraseña</a>
   </div>
 </ion-card>
 </ion-content>

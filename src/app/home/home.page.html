@@ -1,6 +1,6 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
+    <ion-title class="letritasblancas">
       Welcome
     </ion-title>
   </ion-toolbar>
@@ -13,11 +13,11 @@
     </ion-toolbar>
   </ion-header>
   <div id="container">
-    <ion-card class="truco" class="letritasblancas">
+    <ion-card class="truco" class="letritasblancas desplazar">
     <h1 class="wachiturro">Bienvenido {{data}}</h1>
     <ion-button (click)="takePicture()" class="boton" shape="round">abrir camara</ion-button>
     <br><br>
-    <a href="/acceso" class="letritasblancas">Atras</a>
+    <a href="/acceso" class="letritasblancas truco">Atras</a>
     <br><br>
   </ion-card>
   </div>
