@@ -1,11 +1,11 @@
 <ion-header [translucent]="true">
   <ion-toolbar class="pollo">
-    <ion-title class="letritasblancas">Login
+    <ion-title class="letritasblancas ">Login
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true" >
+<ion-content [fullscreen]="true" class="animate__animated animate__backInUp" >
   <ion-card class="pollo">
   <div class="ion-text-center">
   <h1 class="letritasblancas">Login</h1>
@@ -24,8 +24,8 @@
   </ion-card>
 
   <div class="ion-text-center">
-  <ion-button color="primary" (click)="validarUser()" shape="round">Login</ion-button>
-  <a href="/recordar" class="truco">recuperar contraseña</a>
+  <ion-button color="primary" (click)="validarUser()" shape="round">Acceder</ion-button>
   </div>
+  <div class="ion-text-center"><a href="/recordar" class="truco">recuperar contraseña</a></div>
 </ion-card>
 </ion-content>

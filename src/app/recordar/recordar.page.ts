@@ -11,6 +11,7 @@ export class RecordarPage implements OnInit {
   usuarios:user[]=[
     {Id:1,nombre:'chiquitin',password:'Lrealotp'},
     {Id:2,nombre:'itsotroky',password:'noganktop'},
+    {Id:3,nombre:'profe',password:'1234'}
   ]
   user:any;
   constructor(private route:Router) {}
