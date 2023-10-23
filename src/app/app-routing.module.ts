@@ -18,7 +18,15 @@ const routes: Routes = [
   {
     path: 'recordar',
     loadChildren: () => import('./recordar/recordar.module').then( m => m.RecordarPageModule)
+  },  {
+    path: 'registrar',
+    loadChildren: () => import('./registrar/registrar.module').then( m => m.RegistrarPageModule)
   },
+  {
+    path: 'api-rest',
+    loadChildren: () => import('./api-rest/api-rest.module').then( m => m.ApiRestPageModule)
+  },
+
 ];
 
 @NgModule({
