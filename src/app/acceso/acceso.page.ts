@@ -22,18 +22,15 @@ async validarUser(){
   const Loading = await this.lgcontrol.create();
   const alert = await this.alControl.create({
     header: 'Error (X)',
-    subHeader: 'ta malo',
-    message: 'Por favor, ingrese datos wenos.',
-    buttons: ['ya'],
+    subHeader: 'Credenciales inválidas',
+    message: 'Por favor, ingrese credenciales válidas.',
+    buttons: ['OK'],
   });
   await Loading.present()
   const usuario= this.authservi.loginUser(this.user,this.password).then(()=>{
     Loading.dismiss()
     this.router.navigate(['/home',this.user])
-  }).catch((error)=>{
-    Loading.dismiss()
-    alert.present()
-  })
+  }).catch((error)=>{Loading.dismiss()})
 }
   ngOnInit() {
   }
