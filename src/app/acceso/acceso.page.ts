@@ -18,6 +18,8 @@ export class AccesoPage implements OnInit {
   private cargar:Animation={}as Animation;
   constructor(private router:Router,private AnimationCtrl:AnimationController,private authservi:ServicioService,private lgcontrol:LoadingController,private alControl:AlertController) {}
 
+ngOnInit() {
+  } 
 async validarUser(){
   const Loading = await this.lgcontrol.create();
   const alert = await this.alControl.create({
@@ -27,12 +29,15 @@ async validarUser(){
     buttons: ['OK'],
   });
   await Loading.present()
-  const usuario= this.authservi.loginUser(this.user,this.password).then(()=>{
+  const usuario = await this.authservi.loginUser(this.user,this.password).catch((error) => {
+    Loading.dismiss()
+  })
+  if(usuario){
     Loading.dismiss()
     this.router.navigate(['/home',this.user])
-  }).catch((error)=>{Loading.dismiss()})
-}
-  ngOnInit() {
+  }else{
+    console.log('provide correct values');
+    
   }
-
+}
 }//fin

@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Animation,AnimationController} from '@ionic/angular';
 import { OnInit } from '@angular/core';
 import { Camera, CameraResultType } from '@capacitor/camera';
 import { animate, style, transition, trigger } from '@angular/animations';
+import { ServicioService } from '../servicio.service';
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
@@ -15,7 +16,7 @@ data:any;
 private animacion:Animation = {}as Animation; 
 private desplazar:Animation ={}as Animation;
 
-  constructor(private route:ActivatedRoute,private animationctrl:AnimationController) {this.route.paramMap.subscribe((params)=>{
+  constructor(private router: Router,private authService: ServicioService,private route:ActivatedRoute,private animationctrl:AnimationController) {this.route.paramMap.subscribe((params)=>{
     this.data=params.get('fortnite')
   })}
 
@@ -36,6 +37,9 @@ private desplazar:Animation ={}as Animation;
       resultType: CameraResultType.Uri
     }); 
   };
-
+  salir(){
+    this.authService.signOut()
+    this.router.navigate(['']);
+  }
 }
 //fin
