@@ -26,6 +26,10 @@ const routes: Routes = [
     path: 'api-rest',
     loadChildren: () => import('./api-rest/api-rest.module').then( m => m.ApiRestPageModule)
   },
+  {
+    path: 'api-rest',
+    loadChildren: () => import('./api-rest/api-rest.module').then( m => m.ApiRestPageModule)
+  },
 
 ];
 
