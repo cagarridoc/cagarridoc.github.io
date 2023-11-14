@@ -7,13 +7,15 @@ import { IonicModule } from '@ionic/angular';
 import { ApiRestPageRoutingModule } from './api-rest-routing.module';
 
 import { ApiRestPage } from './api-rest.page';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    ApiRestPageRoutingModule
+    ApiRestPageRoutingModule,
+    HttpClientModule
   ],
   declarations: [ApiRestPage]
 })

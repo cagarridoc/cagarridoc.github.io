@@ -5,11 +5,11 @@ describe('ApiRestPage', () => {
   let component: ApiRestPage;
   let fixture: ComponentFixture<ApiRestPage>;
 
-  beforeEach(async(() => {
+  beforeEach(async () => {
     fixture = TestBed.createComponent(ApiRestPage);
     component = fixture.componentInstance;
     fixture.detectChanges();
-  }));
+  });
 
   it('should create', () => {
     expect(component).toBeTruthy();

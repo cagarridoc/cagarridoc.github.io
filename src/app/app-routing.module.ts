@@ -18,8 +18,9 @@ const routes: Routes = [
   {
     path: 'recordar',
     loadChildren: () => import('./recordar/recordar.module').then( m => m.RecordarPageModule)
-  },  {
-    path: 'registrar',
+  },
+  {
+    path: 'registrar/:dato',
     loadChildren: () => import('./registrar/registrar.module').then( m => m.RegistrarPageModule)
   },
   {

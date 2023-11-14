@@ -28,6 +28,9 @@ private desplazar:Animation ={}as Animation;
       .duration(1500).iterations(1).fromTo('transform','translateX(-200px)','translateX(0px)')
       this.desplazar.play();
   }
+  irRegistro(){
+    this.router.navigate(['/registrar',this.data])
+  }
 
 
   takePicture = async () => {
